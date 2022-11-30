@@ -2,7 +2,16 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    background: linear-gradient(rgba(38, 173, 218, 0.268), rgba(8, 197, 125, 0.357)), url(fondo\ bermudas.jfif)
+    
+}
+body{
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-around ;
+}
+main{
+    background: linear-gradient(rgba(38, 173, 218, 0.268), rgba(8, 197, 125, 0.357)), url(fondo\ bermudas.jfif);
+    padding-bottom: 20px;
 }
 
 .video{
@@ -15,13 +24,12 @@
     justify-content: space-around;
     min-height: 100vh;
     margin: auto;
-    flex-wrap: wrap;
-    
+    flex-wrap: wrap;  
 }
 
 .card{
     position: relative;
-    width: 350px;
+    width: 300px;
     height: 400px;
     margin-top: 25px;
 }
@@ -39,7 +47,7 @@
 .card .front{
     transform: perspective(600px) rotateY(0deg);
     box-shadow: 5px 5px 10px 5px #000;
-    background: #c8b77446;
+    background: rgba(46, 51, 60, 0.489);
 }
 .card img{
     position: absolute;
@@ -54,27 +62,33 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 60px;
+    height: 70px;
     text-align: center;
-    background: rgba(0, 0, 0, 0.524);
+    background: rgba(0, 0, 0, 0.677);
     color: rgb(205, 225, 158);
     line-height: 25px;
 }
+.card h1{
+    background: rgba(0, 0, 0, 0);
+}
 .card span{
+    margin-top: 15px;
     position: absolute;
     color: rgb(217, 181, 153);
     left: 5px;
     bottom: 0;
+    background: rgba(0, 0, 0, 0);
 }
 .card span b{
     font-size: 40px;
+    background: rgba(0, 0, 0, 0);
 }
 
 .card .back{
     transform: perspective(600px) rotateY(180deg);
-    color: rgb(205, 225, 158);
+    color: rgba(142, 152, 117, 0.35);
     box-shadow: 5px 5px 10px 5px #000;
-    background: #c8b77446;
+    background: rgba(46, 51, 60, 0.489);
 }
 
 .card:hover .front{
@@ -82,6 +96,37 @@
 }
 .card:hover .back{
     transform: perspective(600px) rotateY(360deg);;
+}
+
+footer{
+    display: flex;
+    height: 100px;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+    background:  linear-gradient(rgba(38, 80, 218, 0.47), rgba(197, 58, 8, 0.588));
+}
+
+footer .fa{
+    border: 1px solid;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+footer .fa:hover{
+    size: 40px;
+    font-weight: 500;
+    border-radius: 60%;
+}
+
+footer a.fa.fa-whatsapp{
+    color: rgb(53, 188, 65);
+}
+footer a.fa.fa-facebook{
+    color: rgb(53, 75, 188);
+    padding: 5px 10px;
 }
 
 @media screen and (max-width: 768px) {
@@ -93,5 +138,8 @@
         width: 250px;
         height: 300px;
         margin-top: 20px;
+    }
+    *{
+        height: auto;
     }
 }
